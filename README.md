@@ -1,2 +1,2 @@
 # fastmathlib.h
-fast approimated math lib written with chatgpt
+fast approximated math lib written with chatgpt
