@@ -13,3 +13,5 @@ float finv_fast(float x){uint32_t ix=f2u(x);return u2f((0x7F000000u-ix)+((ix&0x0
 float fsqrt_fast(float x){uint32_t ix=f2u(x);return u2f((ix>>1)+0x1FC00000u+((ix&0x007FFFFFu)>>5));}
 
 float frsqrt_fast(float x){uint32_t ix=f2u(x);return u2f((0x5F400000u-(ix>>1))+((ix&0x007FFFFFu)>>4));}
+
+float fcos_fast(float x){return 1.0f + fmul_fast(x,x) * (-0.5f + fmul_fast(x,x) * (0.04166652f + (-0.0013854855f) * fmul_fast(x,x)));}
